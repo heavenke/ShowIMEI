@@ -186,7 +186,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         MEID = intent.getStringExtra("meid");
         IMEI1 = intent.getStringExtra("imei1");
         IMEI2 = intent.getStringExtra("imei2");
-        test();
+        //test();
         //判断是否存在传参,如果没有传入参数,则启动读取手机信息授予权限,授权完毕后读取并显示IMEI等参数
         if (TextUtils.isEmpty(MEID) &&
                 TextUtils.isEmpty(IMEI1) &&
