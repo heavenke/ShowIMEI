@@ -3,6 +3,7 @@ package com.heavenke.showimei;
 import static com.heavenke.showimei.Utils.CheckSumApp;
 import static com.heavenke.showimei.Utils.getButtonvalue;
 import static com.heavenke.showimei.Utils.getChecksumvalue;
+import static com.heavenke.showimei.Utils.getDevelopermodevalue;
 import static com.heavenke.showimei.Utils.getIMEI2fakevalue;
 import static com.heavenke.showimei.Utils.getIMEI2fromIMEI1;
 import static com.heavenke.showimei.Utils.getMeidfakevalue;
@@ -307,21 +308,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setPhoneInfo();
     }
     public void setPhoneInfo(){
-         if(CheckSumApp()){
-         iv_warring.setVisibility(View.GONE);
-         tv_warring.setVisibility(View.GONE);
-         MEIDFAKE = SystemProperties.get(getMeidfakevalue());
-            if(TextUtils.isEmpty(MEID) && !TextUtils.isEmpty(MEIDFAKE)){
-                MEID= MEIDFAKE;
-            }
-         }else{
-         iv_warring.setVisibility(View.VISIBLE);
-         tv_warring.setVisibility(View.VISIBLE);
-         MEID="";
-         IMEI1="";
-         IMEI2="";
-         SN="";
-         }
+        ShowHuaji(shouldShowHuaji());
         if(TextUtils.isEmpty(IMEI1)){
             tv_imei1_title.setVisibility(View.GONE);
             tv_imei1.setVisibility(View.GONE);
@@ -375,6 +362,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             iv_meid.setImageBitmap(Utils.createBarcode(MEID));
             tv_meid.setText(MEID);
         }
+    }
+    public void ShowHuaji(Boolean b){
+        if(b){
+            iv_warring.setVisibility(View.VISIBLE);
+            tv_warring.setVisibility(View.VISIBLE);
+            MEID="";
+            IMEI1="";
+            IMEI2="";
+            SN="";
+        }else{
+            iv_warring.setVisibility(View.GONE);
+            tv_warring.setVisibility(View.GONE);
+            MEIDFAKE = SystemProperties.get(getMeidfakevalue());
+            if(TextUtils.isEmpty(MEID) && !TextUtils.isEmpty(MEIDFAKE)){
+                MEID= MEIDFAKE;
+            }
+        }
+    }
+    private boolean shouldShowHuaji() {
+        if (SystemProperties.getBoolean(getDevelopermodevalue(), false)) {
+            return false;
+        }
+        return !CheckSumApp();
     }
     public void test(){
         MEID = "A0000000000000";

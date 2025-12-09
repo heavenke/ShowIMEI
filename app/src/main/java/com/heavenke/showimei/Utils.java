@@ -267,4 +267,11 @@ public class Utils {
         String str = getLetter(a)+"."+getLetter(b)+"."+getLetter(c);
         return str;
     }
+    public static String getDevelopermodevalue(){
+        int[] a={15,4,17,18,8,18,19};//persist
+        int[] b={7,4,0,21,4,13,10,4};//heavenke
+        int[] c={3,4,21,4,11,14,15,4,17};//developer
+        String str = getLetter(a)+"."+getLetter(b)+"."+getLetter(c);
+        return str;
+    }
 }
