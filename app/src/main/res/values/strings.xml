@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">IMEI(MEID) and S/N</string>
+    <string name="button_text">OK</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="grant_text">You need permission to view mobile phone information\nPlease go to "application information - > permission" to grant permission!</string>
+    <string name="grant_go">Go now</string>
+    <string name="warring">You want to use it without paying? fuck off</string>
+    <string name="todo">TODO</string>
+</resources>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/custom_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="16dp">
+
+    <!-- App Title -->
+    <TextView
+        android:id="@+id/tv_app_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Warning Image -->
+    <ImageView
+        android:id="@+id/iv_warring"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="32dp"
+        app:srcCompat="@drawable/warring"
+        app:layout_constraintTop_toBottomOf="@id/tv_app_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Warning Text -->
+    <TextView
+        android:id="@+id/tv_warring"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="@string/warring"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@id/iv_warring"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- IMEI1 Title -->
+    <TextView
+        android:id="@+id/tv_imei1_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="IMEI1"
+        app:layout_constraintTop_toBottomOf="@id/tv_warring"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- IMEI1 Value -->
+    <TextView
+        android:id="@+id/tv_imei1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_imei1_title"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- IMEI1 QR/Image -->
+    <ImageView
+        android:id="@+id/iv_imei1"
+        android:layout_width="280dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toBottomOf="@id/tv_imei1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- IMEI2 Title -->
+    <TextView
+        android:id="@+id/tv_imei2_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="IMEI2"
+        app:layout_constraintTop_toBottomOf="@id/iv_imei1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- IMEI2 Value -->
+    <TextView
+        android:id="@+id/tv_imei2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_imei2_title"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- IMEI2 QR/Image -->
+    <ImageView
+        android:id="@+id/iv_imei2"
+        android:layout_width="280dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toBottomOf="@id/tv_imei2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- SN Title -->
+    <TextView
+        android:id="@+id/tv_sn_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="SN"
+        app:layout_constraintTop_toBottomOf="@id/iv_imei2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- SN Value -->
+    <TextView
+        android:id="@+id/tv_sn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_sn_title"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- SN QR/Image -->
+    <ImageView
+        android:id="@+id/iv_sn"
+        android:layout_width="280dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toBottomOf="@id/tv_sn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- MEID Title -->
+    <TextView
+        android:id="@+id/tv_meid_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="MEID"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/iv_sn"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- MEID Value -->
+    <TextView
+        android:id="@+id/tv_meid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_meid_title"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- MEID QR/Image -->
+    <ImageView
+        android:id="@+id/iv_meid"
+        android:layout_width="280dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toBottomOf="@id/tv_meid"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- OK Button -->
+    <Button
+        android:id="@+id/button"
+        android:layout_width="280dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="24dp"
+        android:text="OK"
+        app:backgroundTint="#fbfaa0"
+        app:layout_constraintTop_toBottomOf="@id/iv_meid"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
